@@ -1,0 +1,38 @@
+[
+  {
+    "id": "week-10-harness",
+    "question": "第 10 周 Harness Engineering 学什么？",
+    "expectedIncludes": ["Harness", "runtime", "Tool registry", "Trace"],
+    "expectedSources": ["roadmap/week-10.md"]
+  },
+  {
+    "id": "week-05-mcp",
+    "question": "MCP 基础包括哪些角色？",
+    "expectedIncludes": ["MCP", "Host", "Client", "Server"],
+    "expectedSources": ["roadmap/week-05.md"]
+  },
+  {
+    "id": "week-04-rag",
+    "question": "RAG 学习里为什么要引用来源？",
+    "expectedIncludes": ["RAG", "引用", "来源"],
+    "expectedSources": ["roadmap/week-04.md"]
+  },
+  {
+    "id": "week-08-skills",
+    "question": "AGENTS.md、skill、MCP 的职责边界是什么？",
+    "expectedIncludes": ["AGENTS.md", "Skill", "MCP"],
+    "expectedSources": ["roadmap/week-08.md"]
+  },
+  {
+    "id": "week-07-security",
+    "question": "Prompt injection 防护和 Tool authorization 应该怎么设计？",
+    "expectedIncludes": ["Prompt injection", "tool authorization", "harness"],
+    "expectedSources": ["roadmap/week-07.md"]
+  },
+  {
+    "id": "unknown-topic-refusal",
+    "question": "这个仓库的量子计算硬件路线是什么？",
+    "expectedIncludes": ["没有在当前仓库资料中找到"],
+    "expectedSources": []
+  }
+]

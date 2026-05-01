@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+.turbo/
+.env
+.env.*
+coverage/
+*.log
+harness/checkpoints/*.json
+harness/traces/*.json
+evals/results/*.json
+

@@ -1,0 +1,22 @@
+{
+  "name": "ai-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assistant:dev": "tsx projects/ai-learning-assistant/src/server.ts",
+    "eval": "tsx evals/src/run-evals.ts",
+    "harness:demo": "tsx harness/examples/run-basic.ts",
+    "lab:agent": "tsx labs/week-07-agent-loop/src/index.ts",
+    "lab:hello": "tsx labs/week-01-hello-llm/src/index.ts",
+    "lab:rag": "tsx labs/week-04-rag-search/src/index.ts",
+    "lab:structured": "tsx labs/week-01-structured-output/src/index.ts",
+    "test": "pnpm typecheck && pnpm eval",
+    "typecheck": "tsc -p tsconfig.base.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

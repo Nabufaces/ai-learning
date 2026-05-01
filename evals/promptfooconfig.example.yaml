@@ -1,0 +1,21 @@
+description: AI learning assistant regression evals
+
+prompts:
+  - "{{question}}"
+
+providers:
+  - id: file://./evals/provider-example.cjs
+
+tests:
+  - vars:
+      question: "第 10 周 Harness Engineering 学什么？"
+    assert:
+      - type: contains
+        value: "Harness"
+      - type: contains
+        value: "Trace"
+  - vars:
+      question: "这个仓库的量子计算硬件路线是什么？"
+    assert:
+      - type: contains
+        value: "没有在当前仓库资料中找到"
