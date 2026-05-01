@@ -1,48 +1,86 @@
+---
+description: 12 周 TypeScript 优先的 AI 应用开发与 Agent 工程学习教程
+icon: graduation-cap
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+---
+
 # AI Learning
 
-TypeScript-first learning repository for building AI applications and agents from zero to one.
+<code class="expression">space.vars.course_name</code> 是一套 <code class="expression">space.vars.course_duration</code> 的 AI 应用开发学习教程，目标是从零到一构建一个 <code class="expression">space.vars.primary_stack</code> 的 AI 学习助手，并系统掌握 LLM API、RAG、MCP、Agent、Harness Engineering、Eval 和 coding agent 工作流。
 
-## Goal
+{% hint style="info" %}
+这不是资料链接合集。每一周都包含概念讲解、工程取舍、主项目增量、动手任务、验收标准和复盘问题。
+{% endhint %}
 
-This repository is designed to turn AI application development into a concrete 12-week path:
+## 从这里开始
 
-1. Learn the AI application stack: LLM APIs, structured output, tool calling, RAG, MCP, agents, and evaluation.
-2. Build reusable project knowledge for Codex, Claude Code, skills, and Superpowers workflows.
-3. Build the AI learning assistant incrementally from Week 2 onward, rather than treating it as a final-week sprint.
+<table data-view="cards">
+    <thead>
+        <tr>
+            <th>入口</th>
+            <th>说明</th>
+            <th data-card-target data-type="content-ref">打开</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>12 周路线</td>
+            <td>按周学习 AI 应用开发主线</td>
+            <td><a href="roadmap/README.md">路线总览</a></td>
+        </tr>
+        <tr>
+            <td>主项目贯穿线</td>
+            <td>查看 AI 学习助手如何每周增量构建</td>
+            <td><a href="roadmap/project-throughline.md">项目路线</a></td>
+        </tr>
+        <tr>
+            <td>技术栈说明</td>
+            <td>了解 Vercel AI SDK、Zod、RAG、PromptFoo、Langfuse 等工具定位</td>
+            <td><a href="roadmap/tech-stack.md">技术栈</a></td>
+        </tr>
+        <tr>
+            <td>GitBook 发布</td>
+            <td>把 GitHub 仓库同步为 GitBook 文档站点</td>
+            <td><a href="roadmap/gitbook-publishing.md">发布说明</a></td>
+        </tr>
+    </tbody>
+</table>
 
-## How To Use This Repository
+<a href="roadmap/week-01.md" class="button primary" data-icon="rocket">开始 Week 1</a>
+<a href="https://github.com/Nabufaces/ai-learning" class="button secondary" data-icon="github">查看 GitHub 仓库</a>
 
-1. Start with [roadmap/README.md](roadmap/README.md).
-2. Read one weekly roadmap file before doing that week's work.
-3. Run the matching lab when available.
-4. Keep notes, failures, prompts, and design choices in the week file or a new note under `roadmap/notes/`.
-5. Track the main project through [roadmap/project-throughline.md](roadmap/project-throughline.md).
-6. Use [evals/README.md](evals/README.md) and [harness/README.md](harness/README.md) once the project starts using tools or agents.
+## 你会学到什么
 
-## GitBook Reading
+{% columns %}
+{% column %}
+### AI 应用开发
 
-This repository is ready to be used as a GitBook-backed knowledge base:
+- LLM API 和结构化输出
+- TypeScript AI 应用骨架
+- RAG、向量数据库和混合检索
+- MCP tools/resources/prompts
+- Agent loop 和安全边界
 
-- [SUMMARY.md](SUMMARY.md) defines the GitBook navigation.
-- [.gitbook.yaml](.gitbook.yaml) tells GitBook to use the repository root, `README.md`, and `SUMMARY.md`.
-- [roadmap/gitbook-publishing.md](roadmap/gitbook-publishing.md) explains how to sync the repository to GitBook from GitHub.
+{% endcolumn %}
 
-The weekly roadmap files are written as learning chapters, not just checklists. External links are included as references, but key concepts are explained directly in the repository.
+{% column %}
+### 工程化能力
 
-## Repository Map
+- Harness runtime、permission、budget、trace
+- Langfuse/LangSmith/OpenTelemetry observability
+- PromptFoo、RAGAS 和 eval harness
+- Codex、Claude Code、AGENTS.md 和 skills
+- GitBook 化学习文档维护
 
-| Path | Purpose |
-| --- | --- |
-| `roadmap/` | 12-week learning path with goals, concepts, exercises, and acceptance criteria. |
-| `labs/` | Small TypeScript labs for structured output, RAG, and agent loops. |
-| `projects/ai-learning-assistant/` | Main project: a learning assistant that gains capability each week. |
-| `harness/` | Harness engineering primitives: runner, tool registry, budget, trace, checkpoint. |
-| `evals/` | Eval cases and a basic eval runner for learning assistant behavior. |
-| `agent-workflows/` | Codex, Claude Code, AGENTS.md, skills, and Superpowers workflow templates. |
+{% endcolumn %}
+{% endcolumns %}
 
-## Commands
-
-Use pnpm.
+## 本地运行
 
 ```bash
 pnpm install
@@ -58,9 +96,10 @@ pnpm assistant:dev
 
 The assistant server defaults to `http://localhost:4317`.
 
-## Learning Contract
+## 学习约定
 
-- Prefer building small working slices over collecting links.
-- Every week must produce a visible artifact: a note, lab run, eval case, tool, API route, or project increment in the AI learning assistant.
-- Every agent or tool feature must have a failure scenario and an eval case.
-- Harness engineering is treated as a first-class topic: the runtime around the model matters as much as the prompt.
+- 每周至少产出一个可验证成果：笔记、lab、eval case、tool、API route 或项目增量。
+- 不只收集链接；核心概念要能用自己的话解释。
+- 每个 agent、tool、RAG 或 harness 行为都要有失败场景。
+- 完成不等于“模型说可以”，完成必须有验证命令或评测结果。
+

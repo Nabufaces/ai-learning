@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Week 4 Lab: Local RAG Search"
+icon: flask-vial
+---
+
 # Week 4 Lab: Local RAG Search
 
 Run:

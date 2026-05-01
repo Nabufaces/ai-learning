@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：RAGAS Metric Mapping"
+icon: chart-line
+---
+
 # RAGAS Metric Mapping
 
 This repository does not run RAGAS yet, but Week 11 should map the assistant data to RAGAS-style metrics.

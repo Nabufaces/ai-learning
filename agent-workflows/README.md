@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Agent Workflows"
+icon: robot
+---
+
 # Agent Workflows
 
 This directory contains reusable guidance for using AI coding agents while building this repository.

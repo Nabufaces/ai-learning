@@ -1,8 +1,17 @@
+---
+description: "AI Learning 教程页面：Week 8: 编码 Agent 工作流"
+icon: calendar-days
+---
+
 # Week 8: 编码 Agent 工作流
 
 ## 本周目标
 
 本周学习如何让 Codex、Claude Code 和其他 coding agent 稳定参与项目开发。重点不是“哪个工具更聪明”，而是建立 agentic coding 的工作流：读代码、规划、小步修改、验证、review、记录风险。
+
+{% hint style="info" %}
+本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
+{% endhint %}
 
 ## 学习地图
 
@@ -83,10 +92,31 @@ Claude Code 常见优势在于：
 
 ## 动手任务
 
-1. 审查 AGENTS.md 是否短而可执行。
-2. 用 Codex/Claude Code 工作流描述一次“新增 eval case”的 agentic coding 流程。
-3. 写下 coding agent 在本仓库中必须遵守的验证命令。
-4. 明确 AGENTS.md、Skill、MCP 的职责边界。
+{% stepper %}
+{% step %}
+## Step 1
+
+审查 AGENTS.md 是否短而可执行。
+{% endstep %}
+
+{% step %}
+## Step 2
+
+用 Codex/Claude Code 工作流描述一次“新增 eval case”的 agentic coding 流程。
+{% endstep %}
+
+{% step %}
+## Step 3
+
+写下 coding agent 在本仓库中必须遵守的验证命令。
+{% endstep %}
+
+{% step %}
+## Step 4
+
+明确 AGENTS.md、Skill、MCP 的职责边界。
+{% endstep %}
+{% endstepper %}
 
 ## 验收标准
 
@@ -97,11 +127,13 @@ Claude Code 常见优势在于：
 
 ## 常见误区
 
+{% hint style="warning" %}
 - 误区：把所有背景都写进 AGENTS.md。  
   更好的做法：AGENTS.md 放常驻规则，细节放 GitBook、skills 或 workflow 文档。
 
 - 误区：AI 写完代码就算完成。  
   更好的做法：完成必须包含验证输出和风险说明。
+{% endhint %}
 
 ## 复盘问题
 

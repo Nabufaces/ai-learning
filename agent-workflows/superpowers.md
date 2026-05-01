@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Superpowers Workflow"
+icon: robot
+---
+
 # Superpowers Workflow
 
 Superpowers is treated here as a disciplined development method and installed skill set, not as magic and not as Claude extended thinking.

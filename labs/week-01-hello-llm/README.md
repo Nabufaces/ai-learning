@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Week 1 Lab: Hello LLM CLI"
+icon: flask-vial
+---
+
 # Week 1 Lab: Hello LLM CLI
 
 Run:

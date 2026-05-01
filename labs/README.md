@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Labs"
+icon: flask-vial
+---
+
 # Labs
 
 Labs are small, dependency-light TypeScript exercises. They are intentionally simple so the learning focus stays on AI application behavior, not framework setup.

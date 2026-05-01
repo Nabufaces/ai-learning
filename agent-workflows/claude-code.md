@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Claude Code Workflow"
+icon: robot
+---
+
 # Claude Code Workflow
 
 Use Claude Code when you want deep codebase work, skill-based playbooks, or subagent-style decomposition.

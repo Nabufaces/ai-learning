@@ -1,8 +1,17 @@
+---
+description: "AI Learning 教程页面：Week 12: 整合打磨、评测报告和复盘"
+icon: calendar-days
+---
+
 # Week 12: 整合打磨、评测报告和复盘
 
 ## 本周目标
 
 本周不是从零赶工做项目，而是整合前 11 周的增量成果。最终 AI 学习助手应该能运行、能检索、能调用工具、能被 harness 控制、能被 eval 检查，并且能清楚说明自己的能力边界。
+
+{% hint style="info" %}
+本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
+{% endhint %}
 
 ## 学习地图
 
@@ -98,12 +107,43 @@
 
 ## 动手任务
 
-1. 运行 `pnpm assistant:dev`。
-2. 用真实问题测试 `/api/chat` 和 `/api/search`。
-3. 运行 `pnpm eval`，保存结果摘要。
-4. 按 [project-throughline.md](project-throughline.md) 检查每周主项目切片是否完成。
-5. 检查 `SUMMARY.md` 是否覆盖所有阅读入口。
-6. 写一份项目复盘：已完成、未完成、下一步。
+{% stepper %}
+{% step %}
+## Step 1
+
+运行 `pnpm assistant:dev`。
+{% endstep %}
+
+{% step %}
+## Step 2
+
+用真实问题测试 `/api/chat` 和 `/api/search`。
+{% endstep %}
+
+{% step %}
+## Step 3
+
+运行 `pnpm eval`，保存结果摘要。
+{% endstep %}
+
+{% step %}
+## Step 4
+
+按 [project-throughline.md](project-throughline.md) 检查每周主项目切片是否完成。
+{% endstep %}
+
+{% step %}
+## Step 5
+
+检查 `SUMMARY.md` 是否覆盖所有阅读入口。
+{% endstep %}
+
+{% step %}
+## Step 6
+
+写一份项目复盘：已完成、未完成、下一步。
+{% endstep %}
+{% endstepper %}
 
 ## 验收标准
 
@@ -115,11 +155,13 @@
 
 ## 常见误区
 
+{% hint style="warning" %}
 - 误区：Week 12 才开始做最终项目。  
   更好的做法：Week 12 只做整合、评测、文档和复盘。
 
 - 误区：demo 能跑就算完成。  
   更好的做法：demo、eval、trace、文档和下一步 backlog 都要有。
+{% endhint %}
 
 ## 复盘问题
 

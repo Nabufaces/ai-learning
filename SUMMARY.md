@@ -46,5 +46,4 @@
 * [Codex Workflow](agent-workflows/codex.md)
 * [Claude Code Workflow](agent-workflows/claude-code.md)
 * [Superpowers Workflow](agent-workflows/superpowers.md)
-* [Learning Review Skill](agent-workflows/skills/learning-review/SKILL.md)
-
+* [Learning Review Skill](agent-workflows/learning-review.md)

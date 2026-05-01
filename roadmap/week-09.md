@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Week 9: Skills、Prompt 工程沉淀和 Superpowers"
+icon: calendar-days
+---
+
 # Week 9: Skills、Prompt 工程沉淀和 Superpowers
 
 ## 本周目标
@@ -15,6 +20,10 @@
 - requesting-code-review / receiving-code-review：把 review 当作质量门。
 
 它是 agent-assisted development 的流程技能包，不是 Claude extended thinking、interleaved thinking 或某个模型能力名称。
+
+{% hint style="info" %}
+本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
+{% endhint %}
 
 ## 学习地图
 
@@ -83,11 +92,37 @@ Progressive disclosure 是指只在需要时加载详细知识。这样可以避
 
 ## 动手任务
 
-1. 运行一次 `learning-review` skill 的人工模拟。
-2. 把一个重复 prompt 改写成项目 skill 或 prompt 模板。
-3. 为 AI 学习助手新增一个小功能，先写计划，再实现。
-4. 写一个最小失败测试或 eval case。
-5. 完成后记录验证命令和结果。
+{% stepper %}
+{% step %}
+## Step 1
+
+运行一次 `learning-review` skill 的人工模拟。
+{% endstep %}
+
+{% step %}
+## Step 2
+
+把一个重复 prompt 改写成项目 skill 或 prompt 模板。
+{% endstep %}
+
+{% step %}
+## Step 3
+
+为 AI 学习助手新增一个小功能，先写计划，再实现。
+{% endstep %}
+
+{% step %}
+## Step 4
+
+写一个最小失败测试或 eval case。
+{% endstep %}
+
+{% step %}
+## Step 5
+
+完成后记录验证命令和结果。
+{% endstep %}
+{% endstepper %}
 
 ## 验收标准
 
@@ -99,11 +134,13 @@ Progressive disclosure 是指只在需要时加载详细知识。这样可以避
 
 ## 常见误区
 
+{% hint style="warning" %}
 - 误区：Skill 就是长 prompt。  
   更好的理解：Skill 是任务流程、检查清单和必要知识的组合。
 
 - 误区：Superpowers 是模型更强的思考模式。  
   在本仓库中，Superpowers 是开发流程技能包。
+{% endhint %}
 
 ## 复盘问题
 

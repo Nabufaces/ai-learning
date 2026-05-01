@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：AI 学习助手贯穿式构建线"
+icon: diagram-project
+---
+
 # AI 学习助手贯穿式构建线
 
 这份路线把 AI 学习助手当作 12 周的主载体。每周学习一个主题，同时把主题落到同一个项目里，避免 Week 12 变成赶工整合。

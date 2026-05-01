@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Observability Plan"
+icon: sliders
+---
+
 # Observability Plan
 
 Agent debugging is hard because a final answer hides the path that produced it. The harness should expose enough trace data to answer where a run failed: prompt, retrieval, tool selection, tool execution, model output, or post-processing.

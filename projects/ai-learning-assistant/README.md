@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：AI Learning Assistant"
+icon: graduation-cap
+---
+
 # AI Learning Assistant
 
 This is the main project target for the 12-week roadmap. It is built incrementally from Week 2 onward, not saved for Week 12.

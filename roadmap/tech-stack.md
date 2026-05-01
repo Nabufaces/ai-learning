@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：TypeScript AI 技术栈说明"
+icon: brackets-curly
+---
+
 # TypeScript AI 技术栈说明
 
 本路线 TypeScript 优先，但避免过早引入复杂框架。工具采用“先 baseline，再替换”的策略。

@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Evals"
+icon: chart-line
+---
+
 # Evals
 
 Evals turn learning goals into regression checks. The goal is not to prove the assistant is smart; the goal is to detect when retrieval, tool selection, or answer contracts break.

@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Harness Engineering"
+icon: sliders
+---
+
 # Harness Engineering
 
 Harness engineering is the engineering layer around an AI agent. It controls how the agent receives tasks, selects tools, spends budget, records trace, persists state, and recovers from failure.

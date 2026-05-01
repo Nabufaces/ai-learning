@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：12 周 AI 应用开发路线"
+icon: route
+---
+
 # 12 周 AI 应用开发路线
 
 这条路线面向已经具备基础编程能力的学习者，目标是在 12 周内增量完成一个 TypeScript 优先的 AI 学习助手，并理解 agent 工程所需的 LLM API、Vercel AI SDK、RAG、MCP、agent loop、coding agent workflow、skills、Superpowers 和 harness engineering。
@@ -37,8 +42,34 @@
 
 ## 每周节奏
 
-1. 阅读本周路线。
-2. 用 30 分钟写下本周验收标准。
-3. 完成 lab 或项目切片。
-4. 写一条 eval 或失败案例。
-5. 复盘：哪里是模型能力问题，哪里是 harness 问题。
+{% stepper %}
+{% step %}
+## 阅读本周路线
+
+先读概念详解，再看主项目增量。
+{% endstep %}
+
+{% step %}
+## 锁定验收标准
+
+用 30 分钟写下本周要证明自己掌握了什么。
+{% endstep %}
+
+{% step %}
+## 完成实践切片
+
+运行 lab、补项目功能、写工具 schema 或更新 eval。
+{% endstep %}
+
+{% step %}
+## 记录失败案例
+
+至少写一条 eval、trace、错误记录或复盘问题。
+{% endstep %}
+
+{% step %}
+## 复盘工程原因
+
+区分模型能力问题、应用设计问题和 harness 控制问题。
+{% endstep %}
+{% endstepper %}

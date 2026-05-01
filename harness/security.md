@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Security Boundaries"
+icon: sliders
+---
+
 # Security Boundaries
 
 AI applications need security boundaries because user input, retrieved documents, and tool outputs can all contain instructions that conflict with the system's intent.

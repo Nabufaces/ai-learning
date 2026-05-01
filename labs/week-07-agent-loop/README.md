@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Week 7 Lab: Agent Loop"
+icon: flask-vial
+---
+
 # Week 7 Lab: Agent Loop
 
 Run:

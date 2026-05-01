@@ -1,3 +1,8 @@
+---
+description: "AI Learning 教程页面：Codex Workflow"
+icon: robot
+---
+
 # Codex Workflow
 
 Use Codex for repository-aware implementation, refactoring, review, and verification.
