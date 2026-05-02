@@ -28,7 +28,7 @@ export function loadKnowledgeBase(rootDirectory = process.cwd()): KnowledgeDocum
     .sort()
     .map((file) => ({
       source: relative(rootDirectory, file),
-      content: cleanGitBookMarkdown(readFileSync(file, "utf8"))
+      content: cleanDocumentationMarkdown(readFileSync(file, "utf8"))
     }));
 }
 
@@ -196,14 +196,13 @@ function normalize(input: string): string {
   return input.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
-function cleanGitBookMarkdown(content: string): string {
+function cleanDocumentationMarkdown(content: string): string {
   return content
     .replace(/^---\n[\s\S]*?\n---\n+/, "")
     .split("\n")
-    .filter((line) => !line.trim().match(/^\{%.*%\}$/))
+    .filter((line) => !line.trim().match(/^:::\w*/))
     .filter((line) => !line.includes("本周阅读方式：先读概念"))
     .join("\n")
-    .replace(/<code class="expression">([^<]+)<\/code>/g, "$1")
     .replace(/<a\s+[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g, "$2 ($1)")
     .replace(/<\/?(table|thead|tbody|tr|th|td)[^>]*>/g, " ")
     .replace(/\n{3,}/g, "\n\n")

@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周的目标不是掌握所有模型参数，而是先建立“AI 应用是一个软件系统”的基本直觉：一次 LLM 调用包含输入构造、模型选择、上下文限制、输出解析、错误处理、成本控制和可重复验证。你需要先跑通一个最小 CLI，再理解为什么后续要做 schema、RAG、tool calling 和 eval。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -62,37 +62,25 @@ AI 应用经常需要模型返回 JSON、枚举、字段或数组。只在 promp
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 运行 `pnpm lab:hello`，观察 mock mode 输出。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 可选：设置 `OPENAI_API_KEY` 后调用真实 API。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 运行 `pnpm lab:structured`。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 修改 structured lab 的样例，制造缺字段、类型错误、空数组三种失败。
-{% endstep %}
 
-{% step %}
-## Step 5
+### Step 5
 
 写一段笔记：输出格式错误和事实错误分别应该怎么处理。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -103,13 +91,13 @@ AI 应用经常需要模型返回 JSON、枚举、字段或数组。只在 promp
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：先学很多 prompt 技巧，再写代码。  
   更好的顺序：先跑通 API，再把 prompt 当作可测试的软件接口。
 
 - 误区：模型输出看起来像 JSON 就可以直接用。  
   更好的做法：所有外部输入都需要 validation，模型输出也是外部输入。
-{% endhint %}
+:::
 
 ## 复盘问题
 

@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周开始让 AI 学习助手成为主项目载体。你要建立第一个 Web/API 骨架，理解聊天接口、检索接口、流式响应、错误格式和配置管理。路线建议以 Next.js + Vercel AI SDK 作为目标形态，但当前仓库保留一个无框架 Node baseline，方便先理解底层行为。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -80,37 +80,25 @@ AI 应用里的错误至少分几类：
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 运行 `pnpm assistant:dev`。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 调用 `/health` 确认服务存活。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 调用 `POST /api/search` 检索 Week 1 内容。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 调用 `POST /api/chat` 观察流式输出。
-{% endstep %}
 
-{% step %}
-## Step 5
+### Step 5
 
 在笔记中写下：如果迁移到 Vercel AI SDK，哪些逻辑保留，哪些交给 SDK。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -121,13 +109,13 @@ AI 应用里的错误至少分几类：
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：直接上复杂 UI。  
   更好的做法：先让 API contract 稳定，再做界面。
 
 - 误区：把搜索和回答混在一个黑盒里。  
   更好的做法：先拆出 search，这样 RAG 和 eval 才能定位问题。
-{% endhint %}
+:::
 
 ## 复盘问题
 

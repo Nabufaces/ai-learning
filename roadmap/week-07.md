@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周把学习助手从“被动回答 API”升级为“受控 agent loop”。你需要理解 agent 不是让模型无限自主行动，而是在 harness 控制下循环执行 plan、act、observe、respond。同时，本周必须建立安全意识：prompt injection 和工具越权不是上线后才考虑的问题。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -92,37 +92,25 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 运行 `pnpm lab:agent`。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 给 agent 增加一个预算限制。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 设计一个需要人工确认的工具场景。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 写一个 prompt injection 示例，并说明 harness 如何阻断。
-{% endstep %}
 
-{% step %}
-## Step 5
+### Step 5
 
 画出单 agent 和多 agent 协作的职责差异。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -134,13 +122,13 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：agent 越自主越强。  
   更好的理解：生产级 agent 应该在明确权限、预算和可观测性下行动。
 
 - 误区：安全规则写进 prompt 就够。  
   更好的做法：prompt 负责表达意图，harness 负责执行边界。
-{% endhint %}
+:::
 
 ## 复盘问题
 

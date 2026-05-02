@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周把 Week 5 的 MCP 设计推进到 TypeScript server 实现方案。重点不是一次性完成复杂 server，而是学会如何定义工具、输入 schema、输出结构、错误信息和本地调试方法。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -88,31 +88,21 @@ MCP 工具可以通过 annotation 告诉 Host 这个工具的风险：
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 写出三个 MCP tools 的接口草案。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 给每个 tool 标注 read-only、idempotent、open-world、是否 destructive。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 用伪实现模拟工具返回，先不要接真实模型。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 设计 MCP Inspector 调试步骤。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -123,13 +113,13 @@ MCP 工具可以通过 annotation 告诉 Host 这个工具的风险：
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：MCP server 越通用越好。  
   更好的做法：先围绕真实 agent 工作流设计最小可用工具。
 
 - 误区：工具失败直接 throw 就行。  
   更好的做法：错误应包含原因、可恢复建议和是否可重试。
-{% endhint %}
+:::
 
 ## 复盘问题
 

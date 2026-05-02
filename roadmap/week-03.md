@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周从“写 prompt”升级到“设计可验证的模型接口”。你需要理解 prompt 只是 AI 应用的一层，真正可维护的系统还需要 tool schema、runtime validation、上下文预算和错误恢复。Zod 是本周的关键工具，因为 TypeScript 类型只在编译期存在，模型输出和用户输入必须在运行时验证。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -90,31 +90,21 @@ TypeScript 的类型在运行时不存在。用户请求、模型输出、工具
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 为三个 learning tools 写 name、description、input、output、failure mode。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 用 Zod 草拟 chat request、search request、tool input 和 tool output。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 为长上下文问题写策略：哪些进 prompt，哪些进 RAG，哪些进 trace/checkpoint。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 写一个 eval case，验证模型应该选择 `search_learning_notes` 而不是直接回答。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -125,13 +115,13 @@ TypeScript 的类型在运行时不存在。用户请求、模型输出、工具
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：tool description 越详细越好。  
   更好的做法：描述应短、准确、包含何时使用和何时不用。
 
 - 误区：有 TypeScript 类型就不用运行时校验。  
   更好的做法：只要数据来自模型、用户或文件，就需要 runtime validation。
-{% endhint %}
+:::
 
 ## 复盘问题
 

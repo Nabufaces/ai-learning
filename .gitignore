@@ -1,4 +1,6 @@
 node_modules/
+build/
+.docusaurus/
 dist/
 .next/
 .turbo/
@@ -9,4 +11,3 @@ coverage/
 harness/checkpoints/*.json
 harness/traces/*.json
 evals/results/*.json
-

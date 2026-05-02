@@ -42,34 +42,22 @@ icon: route
 
 ## 每周节奏
 
-{% stepper %}
-{% step %}
 ## 阅读本周路线
 
 先读概念详解，再看主项目增量。
-{% endstep %}
 
-{% step %}
 ## 锁定验收标准
 
 用 30 分钟写下本周要证明自己掌握了什么。
-{% endstep %}
 
-{% step %}
 ## 完成实践切片
 
 运行 lab、补项目功能、写工具 schema 或更新 eval。
-{% endstep %}
 
-{% step %}
 ## 记录失败案例
 
 至少写一条 eval、trace、错误记录或复盘问题。
-{% endstep %}
 
-{% step %}
 ## 复盘工程原因
 
 区分模型能力问题、应用设计问题和 harness 控制问题。
-{% endstep %}
-{% endstepper %}

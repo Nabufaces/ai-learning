@@ -5,12 +5,17 @@
   "type": "module",
   "scripts": {
     "assistant:dev": "tsx projects/ai-learning-assistant/src/server.ts",
+    "build": "pnpm --dir site build",
+    "clear": "pnpm --dir site clear",
+    "deploy": "pnpm --dir site deploy",
     "eval": "tsx evals/src/run-evals.ts",
     "harness:demo": "tsx harness/examples/run-basic.ts",
     "lab:agent": "tsx labs/week-07-agent-loop/src/index.ts",
     "lab:hello": "tsx labs/week-01-hello-llm/src/index.ts",
     "lab:rag": "tsx labs/week-04-rag-search/src/index.ts",
     "lab:structured": "tsx labs/week-01-structured-output/src/index.ts",
+    "serve": "pnpm --dir site serve",
+    "start": "pnpm --dir site start",
     "test": "pnpm typecheck && pnpm eval",
     "typecheck": "tsc -p tsconfig.base.json --noEmit"
   },
@@ -18,5 +23,11 @@
     "@types/node": "^20.12.12",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {},
+  "pnpm": {
+    "overrides": {
+      "webpack": "5.101.3"
+    }
   }
 }

@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周进入 harness engineering。目标是把 agent 从“会调用工具”升级为“在受控运行框架中调用工具”。你要实现或理解 runtime、tool registry、permission、budget、trace，并设计 observability 字段。Harness 是执行边界，Observability 是看见执行过程，两者不能互相替代。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -121,37 +121,25 @@ Langfuse、LangSmith 和 OpenTelemetry 都可以接入这类数据。区别是 L
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 运行 `pnpm harness:demo`。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 增加一个只读工具和一个需要审批的工具。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 制造预算耗尽，观察 trace。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 写一份 observability 选型记录：Langfuse、LangSmith、OpenTelemetry 的取舍。
-{% endstep %}
 
-{% step %}
-## Step 5
+### Step 5
 
 给 AI 学习助手定义 trace 字段：run id、model、retrieval、tool call、latency、token/cost、eval score。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -162,13 +150,13 @@ Langfuse、LangSmith 和 OpenTelemetry 都可以接入这类数据。区别是 L
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：用了 Langfuse 就有 harness。  
   更好的理解：Langfuse 记录和分析行为，harness 执行权限和预算。
 
 - 误区：trace 只是日志。  
   更好的理解：trace 是调试、replay、eval 和恢复的基础数据结构。
-{% endhint %}
+:::
 
 ## 复盘问题
 

@@ -9,9 +9,9 @@ icon: calendar-days
 
 本周学习 MCP 的目标是理解“模型如何安全、标准化地连接外部工具和上下文”。MCP 不是模型，也不是 agent 框架，而是一套协议：让 Host、Client、Server 之间用统一方式暴露 tools、resources 和 prompts。
 
-{% hint style="info" %}
+:::info
 本周阅读方式：先读概念，再完成动手任务；主项目增量和验收标准必须一起看。
-{% endhint %}
+:::
 
 ## 学习地图
 
@@ -75,31 +75,21 @@ Streamable HTTP 适合远程 server，更容易部署、鉴权、限流和观测
 
 ## 动手任务
 
-{% stepper %}
-{% step %}
-## Step 1
+### Step 1
 
 画出 Claude Code/Codex 连接 MCP server 的数据流。
-{% endstep %}
 
-{% step %}
-## Step 2
+### Step 2
 
 为 `search_learning_notes` 设计 MCP tool schema。
-{% endstep %}
 
-{% step %}
-## Step 3
+### Step 3
 
 明确哪些能力是 MCP tools，哪些保留在学习助手内部 API。
-{% endstep %}
 
-{% step %}
-## Step 4
+### Step 4
 
 写出三种失败：找不到资料、参数无效、工具超时。
-{% endstep %}
-{% endstepper %}
 
 ## 验收标准
 
@@ -110,13 +100,13 @@ Streamable HTTP 适合远程 server，更容易部署、鉴权、限流和观测
 
 ## 常见误区
 
-{% hint style="warning" %}
+:::warning
 - 误区：有了 MCP 就不需要 API。  
   更好的理解：MCP 是 agent 接入层，业务 API 仍然可以存在。
 
 - 误区：把所有函数都暴露给 MCP。  
   更好的做法：只暴露 agent 真的需要、权限清晰、错误可恢复的能力。
-{% endhint %}
+:::
 
 ## 复盘问题
 

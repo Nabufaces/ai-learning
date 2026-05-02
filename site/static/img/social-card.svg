@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI Learning">
+  <rect width="1200" height="630" fill="#10233d"/>
+  <path d="M0 450C180 370 300 390 480 460s350 95 720-60v230H0z" fill="#276749"/>
+  <text x="96" y="220" fill="#ffffff" font-family="Arial, sans-serif" font-size="86" font-weight="700">AI Learning</text>
+  <text x="100" y="306" fill="#d7f4ef" font-family="Arial, sans-serif" font-size="38">12 周 TypeScript 优先的 AI 应用开发学习教程</text>
+  <text x="100" y="386" fill="#ffffff" font-family="Arial, sans-serif" font-size="30">LLM API · RAG · MCP · Agent · Harness · Eval</text>
+</svg>
