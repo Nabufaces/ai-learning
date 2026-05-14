@@ -6,7 +6,12 @@ import styles from "./index.module.css";
 
 const learningTracks = [
   {
-    title: "应用主线",
+    title: "零基础入门",
+    description: "从开发环境、命令行、TypeScript、API、Git 和 AI 基础开始，补齐进入主线前的最低工程能力。",
+    href: "/docs/beginners"
+  },
+  {
+    title: "12 周应用主线",
     description: "从 LLM API、Vercel AI SDK、结构化输出到 RAG、MCP、LangChain.js、LangGraph 和 Agent loop，逐周把 AI 学习助手做出来。",
     href: "/docs/roadmap"
   },
@@ -26,7 +31,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="AI 应用开发学习路线"
-      description="12 周 TypeScript 优先的 AI 应用开发、Agent 工程和 Harness Engineering 学习教程">
+      description="包含零基础入门和 12 周 TypeScript 优先 AI 应用开发路线的学习教程">
       <main>
         <section className={styles.hero}>
           <div className={styles.heroInner}>
@@ -35,14 +40,14 @@ export default function Home(): JSX.Element {
               AI Learning
             </Heading>
             <p className={styles.subtitle}>
-              12 周从 LLM API 到 RAG、MCP、Agent、Harness Engineering、Eval 和 AI 编码工作流，最终完成一个 AI 学习助手。
+              从零基础预备课到 12 周 AI 应用开发主线，逐步掌握 LLM API、RAG、MCP、Agent、Harness Engineering、Eval 和 AI 编码工作流。
             </p>
             <div className={styles.actions}>
-              <Link className="button button--primary button--lg" to="/docs/roadmap/week-01">
-                开始 Week 1
+              <Link className="button button--primary button--lg" to="/docs/beginners">
+                从零基础开始
               </Link>
-              <Link className="button button--secondary button--lg" to="/docs/roadmap/project-throughline">
-                查看项目贯穿线
+              <Link className="button button--secondary button--lg" to="/docs/roadmap/week-01">
+                直接进入 Week 1
               </Link>
             </div>
           </div>

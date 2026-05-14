@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import type { AssistantAnswer, KnowledgeDocument, SearchResult } from "./types.js";
 
-const DEFAULT_DIRECTORIES = ["roadmap", "harness", "evals", "agent-workflows"];
+const DEFAULT_DIRECTORIES = ["beginners", "roadmap", "harness", "evals", "agent-workflows"];
 const DEFAULT_FILES = ["README.md", "AGENTS.md"];
 
 export function loadKnowledgeBase(rootDirectory = process.cwd()): KnowledgeDocument[] {

@@ -6,7 +6,7 @@ slug: /
 
 # AI Learning
 
-AI Learning 是一套 12 周的 AI 应用开发学习教程，目标是从零到一构建一个 TypeScript 优先的 AI 学习助手，并系统掌握 LLM API、RAG、MCP、LangChain.js、LangGraph、Agent、Harness Engineering、Eval 和 coding agent 工作流。
+AI Learning 是一套 AI 应用开发学习教程，包含两条入口：面向小白的零基础入门路线，以及面向已有编程基础学习者的 12 周 AI 应用开发路线。最终目标是从零到一构建一个 TypeScript 优先的 AI 学习助手，并系统掌握 LLM API、RAG、MCP、LangChain.js、LangGraph、Agent、Harness Engineering、Eval 和 coding agent 工作流。
 
 在线阅读：[https://nabufaces.github.io/ai-learning/](https://nabufaces.github.io/ai-learning/)
 
@@ -14,7 +14,16 @@ GitHub 仓库：[https://github.com/Nabufaces/ai-learning](https://github.com/Na
 
 > 这不是资料链接合集。每一周都包含概念讲解、工程取舍、主项目增量、动手任务、验收标准和复盘问题。
 
-## 学习路线
+## 选择路线
+
+| 路线 | 适合人群 | 入口 |
+| --- | --- | --- |
+| 零基础入门路线 | 没有编程基础、不熟悉终端/Git/API 的学习者 | [从零基础开始](beginners/README.md) |
+| 12 周 AI 应用开发路线 | 已有基础编程能力，能运行项目和读简单 TypeScript | [进入 12 周路线](roadmap/README.md) |
+
+零基础路线是预备课，目标是补齐终端、TypeScript、API、Git 和 AI 基础；12 周路线是主线项目课，目标是逐周构建 AI 学习助手。
+
+## 12 周主线
 
 | 周 | 主题 | 主要产出 |
 | --- | --- | --- |
@@ -35,6 +44,7 @@ GitHub 仓库：[https://github.com/Nabufaces/ai-learning](https://github.com/Na
 
 | 入口 | 说明 |
 | --- | --- |
+| [零基础入门](beginners/README.md) | 面向没有编程基础的小白，先补开发环境、TypeScript、API、Git 和 AI 基础 |
 | [12 周路线](roadmap/README.md) | 按周学习 AI 应用开发主线 |
 | [主项目贯穿线](roadmap/project-throughline.md) | 查看 AI 学习助手如何每周增量构建 |
 | [技术栈说明](roadmap/tech-stack.md) | 了解 Vercel AI SDK、Zod、LangChain.js、LangGraph、PromptFoo、Langfuse 等工具定位 |
@@ -46,6 +56,7 @@ GitHub 仓库：[https://github.com/Nabufaces/ai-learning](https://github.com/Na
 ```text
 .
 ├── roadmap/                    # 12 周教程正文、项目贯穿线和技术栈说明
+├── beginners/                  # 面向小白的零基础预备路线
 ├── labs/                       # 每周配套 TypeScript 小练习
 ├── projects/ai-learning-assistant/
 │   └── src/                    # AI 学习助手的最小实现

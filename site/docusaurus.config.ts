@@ -36,6 +36,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           include: [
             "README.md",
+            "beginners/**/*.md",
             "roadmap/**/*.md",
             "labs/**/README.md",
             "projects/**/README.md",
@@ -87,6 +88,10 @@ const config: Config = {
         {
           title: "学习路线",
           items: [
+            {
+              label: "零基础入门",
+              to: "/docs/beginners"
+            },
             {
               label: "12 周路线总览",
               to: "/docs/roadmap"

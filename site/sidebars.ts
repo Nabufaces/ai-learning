@@ -8,11 +8,27 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         "README",
+        "beginners/README",
         "roadmap/README",
         "roadmap/project-throughline",
         "roadmap/tech-stack",
         "roadmap/langchain-langgraph",
         "roadmap/github-pages-publishing"
+      ]
+    },
+    {
+      type: "category",
+      label: "零基础入门",
+      collapsed: false,
+      items: [
+        "beginners/README",
+        "beginners/stage-01-computer-setup",
+        "beginners/stage-02-programming-basics",
+        "beginners/stage-03-web-api-basics",
+        "beginners/stage-04-git-github",
+        "beginners/stage-05-ai-basics",
+        "beginners/stage-06-mini-projects",
+        "beginners/bridge-to-12-week-roadmap"
       ]
     },
     {

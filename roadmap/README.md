@@ -7,6 +7,8 @@ icon: route
 
 这条路线面向已经具备基础编程能力的学习者，目标是在 12 周内增量完成一个 TypeScript 优先的 AI 学习助手，并理解 agent 工程所需的 LLM API、Vercel AI SDK、RAG、MCP、LangChain.js、LangGraph、agent loop、coding agent workflow、skills、Superpowers 和 harness engineering。
 
+如果你还不熟悉终端、Git、TypeScript、HTTP/API 和 JSON，先完成 [零基础入门路线](../beginners/README.md)，再回到这里。
+
 主项目不是 Week 12 的最后冲刺，而是从 Week 2 开始贯穿全程。每周至少给 `projects/ai-learning-assistant/`、`harness/`、`evals/` 或 `agent-workflows/` 增加一个可验证切片。
 
 ## 总览
