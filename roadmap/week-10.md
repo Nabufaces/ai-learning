@@ -22,6 +22,7 @@ icon: calendar-days
 | Permission | agent 能调用什么 | allowlist 和 approval |
 | Budget | 如何限制成本和循环 | maxToolCalls、maxRuntimeMs |
 | Trace | 如何知道每一步发生了什么 | trace events |
+| LangGraph 映射 | 图运行时如何承载状态和中断 | StateGraph/checkpointer/interrupt 对照 |
 | Observability | 如何跨 run 分析问题 | Langfuse/LangSmith/OTel 选型 |
 
 ## 核心概念详解
@@ -96,6 +97,21 @@ Trace 是单次 run 的事件记录，例如 run started、plan created、tool s
 
 Langfuse、LangSmith 和 OpenTelemetry 都可以接入这类数据。区别是 Langfuse 更偏开源 LLM observability，LangSmith 与 LangChain 生态结合更紧，OpenTelemetry 更适合和已有后端 tracing 统一。
 
+### LangGraph 和 Harness 的关系
+
+LangGraph 可以承载一部分 harness runtime 能力，但不能自动替你完成所有生产边界。可以这样映射：
+
+| Harness 概念 | LangGraph 对应能力 | 仍需自己设计的部分 |
+| --- | --- | --- |
+| run state | graph state | 状态 schema 的业务含义和兼容性 |
+| runtime loop | graph nodes/edges | 节点粒度、失败策略、外部副作用边界 |
+| approval | interrupt / human-in-the-loop | 审批权限、审批记录、拒绝后的替代路径 |
+| checkpoint | checkpointer | 哪些工具结果可重放，哪些必须 mock |
+| trace | graph execution trace / LangSmith | 跨系统 correlation id、成本、业务指标 |
+| budget | node/run config | token、成本、外部 API 次数和权限策略 |
+
+学习重点：LangGraph 是 orchestration runtime，自建 harness 是工程控制层。二者可以结合，但不要把“用了 LangGraph”误解成“已经有权限、预算和审计”。
+
 ## 必须实现
 
 - Runtime。
@@ -141,12 +157,17 @@ Langfuse、LangSmith 和 OpenTelemetry 都可以接入这类数据。区别是 L
 
 给 AI 学习助手定义 trace 字段：run id、model、retrieval、tool call、latency、token/cost、eval score。
 
+### Step 6
+
+把 `runHarness` 的状态、工具、approval、checkpoint 和 trace 映射到 LangGraph 的 state、node、interrupt、checkpointer 和 execution trace。
+
 ## 验收标准
 
 - 每次工具调用都出现在 trace 中。
 - 超出预算会停止执行并返回失败原因。
 - 权限拒绝不是异常崩溃，而是可解释结果。
 - 能说明 harness trace 和 observability platform 的关系。
+- 能说明 LangGraph runtime 能承载哪些 harness 能力，哪些仍需业务层控制。
 
 ## 常见误区
 
@@ -163,4 +184,3 @@ Langfuse、LangSmith 和 OpenTelemetry 都可以接入这类数据。区别是 L
 - Harness 应该控制哪些行为？
 - 权限、预算、日志和 checkpoint 哪个最先影响生产可靠性？
 - 没有 trace 时，agent bug 为什么难排查？
-

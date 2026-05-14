@@ -13,7 +13,8 @@ icon: brackets-curly
 | --- | --- | --- |
 | Vercel AI SDK | Week 2 起 | TS AI 应用主 SDK，学习 streaming、tool calling、多模型抽象和结构化输出。 |
 | Zod | Week 3 起 | 请求、工具参数、模型输出和 eval case 的 runtime validation。 |
-| LangChain.js | Week 4/7 选学 | RAG、agent、tool integration 的参考框架；先理解能力边界，再决定是否引入。 |
+| LangChain.js | Week 4/7 选学 | RAG、agent、tool integration、middleware 和 structured output 的参考框架；先理解能力边界，再决定是否引入。 |
+| LangGraph | Week 7/10/11 选学 | Stateful agent orchestration，学习 graph state、nodes、edges、checkpoint、human-in-the-loop、time travel 和 durable execution。 |
 | MCP TypeScript SDK | Week 5/6 | 实现学习助手的 MCP server 和工具接口。 |
 | PromptFoo | Week 11 | TS 友好的 prompt/eval 回归测试和 CI 集成候选。 |
 | RAGAS | Week 11 | 理解 RAG 指标：faithfulness、answer relevancy、context recall。 |
@@ -39,14 +40,26 @@ icon: brackets-curly
 - 向量检索：对语义相似问题更好。
 - 混合检索：推荐作为学习助手默认方向，先关键词 baseline，再加向量召回和 rerank。
 
+## LangChain.js / LangGraph 选型
+
+| 工具 | 适合解决 | 不应该替代 |
+| --- | --- | --- |
+| LangChain.js | 快速组合模型、tools、retrievers、middleware 和常见 agent 架构。 | 不替代对 tool permission、budget、trace 和 eval contract 的理解。 |
+| LangGraph | 构建长时间运行、有状态、可暂停、可恢复的 graph workflow。 | 不替代业务权限、数据边界、审计和发布策略。 |
+| 自建 harness | 学清楚运行控制、权限、预算、trace、checkpoint、replay、eval。 | 不需要永远手写所有 integrations。 |
+
+学习建议：先用本仓库 baseline 解释清楚“为什么需要这个抽象”，再用 LangChain.js / LangGraph 验证成熟框架如何实现类似能力。详见 [LangChain.js 与 LangGraph 学习定位](langchain-langgraph.md)。
+
 ## 参考链接
 
 - Vercel AI SDK: https://vercel.com/docs/ai-sdk
 - Zod: https://zod.dev/
 - LangChain.js agents: https://docs.langchain.com/oss/javascript/langchain/agents
+- LangChain.js retrieval: https://docs.langchain.com/oss/javascript/langchain/retrieval
+- LangGraph overview: https://docs.langchain.com/oss/javascript/langgraph/overview
+- Thinking in LangGraph: https://docs.langchain.com/oss/javascript/langgraph/thinking-in-langgraph
 - Chroma: https://docs.trychroma.com/
 - pgvector: https://github.com/pgvector/pgvector
 - PromptFoo: https://www.promptfoo.dev/docs/getting-started/
 - RAGAS metrics: https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/
 - Langfuse: https://langfuse.com/docs
-

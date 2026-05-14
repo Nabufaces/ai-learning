@@ -19,6 +19,7 @@ icon: calendar-days
 | --- | --- | --- |
 | Agent loop | 模型如何分步使用工具 | `pnpm lab:agent` |
 | 状态管理 | 哪些信息进入 prompt，哪些外部化 | run state 草案 |
+| LangChain.js / LangGraph | 框架如何表达 agent 和 state graph | `createAgent` / `StateGraph` 对照 |
 | 人工确认 | 写工具和危险工具如何审批 | approval 设计 |
 | 安全边界 | 如何防 prompt injection 和工具越权 | security eval case |
 
@@ -80,6 +81,30 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 
 多 agent 会增加协调成本和 trace 复杂度。先把单 agent loop 做可靠，再考虑多 agent。
 
+### LangChain.js createAgent
+
+LangChain.js 的 `createAgent` 适合学习成熟框架如何封装常见 agent loop。它通常会把模型调用、tool selection、tool execution 和最终回答组织成一个可调用对象，并通过 middleware 提供动态 prompt、上下文裁剪、工具错误处理、人类审批和 guardrails。
+
+本周要重点比较：
+
+- `createAgent` 能帮你少写哪些 glue code。
+- middleware 能否表达 context 管理、tool error handling、human-in-the-loop。
+- 哪些边界必须留在 harness 层，例如 allowlist、budget、approval audit 和 destructive tool 禁止策略。
+
+### LangGraph StateGraph
+
+LangGraph 更适合把 agent 拆成显式状态图：节点负责执行一步，边负责决定下一步，state 保存中间结果。它适合复杂流程，例如先分类问题、再检索资料、再生成计划、再请求人工确认、最后写入结果。
+
+本周只需要理解映射关系：
+
+| Agent loop 概念 | LangGraph 概念 |
+| --- | --- |
+| 当前任务和历史观察 | graph state |
+| plan / retrieve / act / review | node |
+| 根据工具结果决定继续或停止 | conditional edge |
+| 人工确认 | interrupt / human-in-the-loop |
+| 失败后恢复 | checkpoint |
+
 ## 主项目增量
 
 本周主项目要能通过 harness 运行一个 deterministic agent loop：
@@ -112,6 +137,10 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 
 画出单 agent 和多 agent 协作的职责差异。
 
+### Step 6
+
+写一份框架对照：用 LangChain.js `createAgent` 和 LangGraph `StateGraph` 分别描述本周 agent loop。
+
 ## 验收标准
 
 - 能解释一次 agent run 的每个 trace event。
@@ -119,6 +148,7 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 - 工具失败后能返回明确失败原因。
 - Agent 不能因为用户输入或检索内容而越权调用工具。
 - 能说明 prompt injection 和 tool authorization 的基本防护。
+- 能说明 LangChain.js agent 和 LangGraph state graph 的适用边界。
 
 ## 常见误区
 
@@ -135,4 +165,3 @@ Tool authorization 是 agent 可以调用哪些工具、用什么参数、是否
 - 哪些状态应该放进 prompt，哪些应该外部化？
 - Agent 的失败该通过 prompt 修，还是通过 harness 修？
 - 安全边界应该写在 prompt、工具 schema，还是 harness 里？
-

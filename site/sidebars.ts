@@ -11,6 +11,7 @@ const sidebars: SidebarsConfig = {
         "roadmap/README",
         "roadmap/project-throughline",
         "roadmap/tech-stack",
+        "roadmap/langchain-langgraph",
         "roadmap/github-pages-publishing"
       ]
     },

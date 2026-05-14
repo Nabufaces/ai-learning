@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 const learningTracks = [
   {
     title: "应用主线",
-    description: "从 LLM API、Vercel AI SDK、结构化输出到 RAG、MCP 和 Agent loop，逐周把 AI 学习助手做出来。",
+    description: "从 LLM API、Vercel AI SDK、结构化输出到 RAG、MCP、LangChain.js、LangGraph 和 Agent loop，逐周把 AI 学习助手做出来。",
     href: "/docs/roadmap"
   },
   {

@@ -6,7 +6,7 @@ slug: /
 
 # AI Learning
 
-AI Learning 是一套 12 周的 AI 应用开发学习教程，目标是从零到一构建一个 TypeScript 优先的 AI 学习助手，并系统掌握 LLM API、RAG、MCP、Agent、Harness Engineering、Eval 和 coding agent 工作流。
+AI Learning 是一套 12 周的 AI 应用开发学习教程，目标是从零到一构建一个 TypeScript 优先的 AI 学习助手，并系统掌握 LLM API、RAG、MCP、LangChain.js、LangGraph、Agent、Harness Engineering、Eval 和 coding agent 工作流。
 
 在线阅读：[https://nabufaces.github.io/ai-learning/](https://nabufaces.github.io/ai-learning/)
 
@@ -21,14 +21,14 @@ GitHub 仓库：[https://github.com/Nabufaces/ai-learning](https://github.com/Na
 | Week 1 | LLM API 基础 | 跑通第一个对话 CLI，理解 token、上下文和结构化输出 |
 | Week 2 | TypeScript AI 应用骨架 | 使用 Vercel AI SDK/Node API 设计聊天入口 |
 | Week 3 | Prompt、Tool Calling、Zod | 建立工具 schema、结构化验证和 context 管理 |
-| Week 4 | RAG | 设计 chunking、embedding、向量库、混合检索和引用来源 |
+| Week 4 | RAG | 设计 chunking、embedding、向量库、混合检索、LangChain.js RAG 对照和引用来源 |
 | Week 5 | MCP 协议 | 理解 Host/Client/Server、tools/resources/prompts 和传输层 |
 | Week 6 | TypeScript MCP Server | 给学习助手暴露笔记检索工具 |
-| Week 7 | Agent Loop | 实现规划、工具选择、状态、重试、人工确认和安全边界 |
+| Week 7 | Agent Loop | 实现规划、工具选择、状态、重试、LangChain.js/LangGraph 对照、人工确认和安全边界 |
 | Week 8 | 编码 Agent 工作流 | 沉淀 Claude Code、Codex 和 AGENTS.md 实践 |
 | Week 9 | Skills 与 Superpowers | 结构化复用 prompt、skills 和工作流方法 |
-| Week 10 | Harness Engineering I | 实现 runtime、tool registry、permission、budget、trace |
-| Week 11 | Harness Engineering II | 加入 checkpoint、replay、failure recovery 和 eval |
+| Week 10 | Harness Engineering I | 实现 runtime、tool registry、permission、budget、trace 和 LangGraph runtime 映射 |
+| Week 11 | Harness Engineering II | 加入 checkpoint、replay、LangGraph time travel、failure recovery 和 eval |
 | Week 12 | 整合打磨 | 完成 AI 学习助手、评测报告和复盘 |
 
 ## 入口
@@ -37,7 +37,8 @@ GitHub 仓库：[https://github.com/Nabufaces/ai-learning](https://github.com/Na
 | --- | --- |
 | [12 周路线](roadmap/README.md) | 按周学习 AI 应用开发主线 |
 | [主项目贯穿线](roadmap/project-throughline.md) | 查看 AI 学习助手如何每周增量构建 |
-| [技术栈说明](roadmap/tech-stack.md) | 了解 Vercel AI SDK、Zod、RAG、PromptFoo、Langfuse 等工具定位 |
+| [技术栈说明](roadmap/tech-stack.md) | 了解 Vercel AI SDK、Zod、LangChain.js、LangGraph、PromptFoo、Langfuse 等工具定位 |
+| [LangChain.js 与 LangGraph](roadmap/langchain-langgraph.md) | 说明它们和自建 RAG、agent loop、harness 主线的关系 |
 | [GitHub Pages 发布](roadmap/github-pages-publishing.md) | 使用 Docusaurus 和 GitHub Actions 发布教程网站 |
 
 ## 项目结构
